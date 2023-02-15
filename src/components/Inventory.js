@@ -1,6 +1,6 @@
 import React from "react";
 import Purse from "./Purse";
-import InventoryTile from "./InventoryTile";
+import { InventoryTile } from "./PotionTile";
 
 function Inventory({ inventory, potions, sell, shake, stopShake, gold }) {
   const inventoryList = inventory.map((item) => {

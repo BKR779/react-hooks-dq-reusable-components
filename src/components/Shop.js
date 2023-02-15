@@ -1,5 +1,5 @@
 import React from "react";
-import ShopTile from "./ShopTile";
+import { ShopTile } from "./PotionTile";
 
 function Shop({ potions, addToInventory }) {
   const potionList = potions.map((potion) => {

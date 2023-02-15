@@ -12,4 +12,28 @@ function PotionTile(props) {
   return <div>PotionTile</div>;
 }
 
-export default PotionTile;
+function InventoryTile({ potion, sell, children }) {
+  return (
+    <div className="inventory-card">
+      <div onClick={() => sell(potion.id)} className="image-wrapper">
+        <img className="image" alt={potion.name} src={potion.image_url} />
+      </div>
+      {children}
+    </div>
+  );
+}
+
+function ShopTile({ potion, addToInventory, children }) {
+  return (
+    <div className="card">
+      <div onClick={() => addToInventory(potion.id)} className="image-wrapper">
+        <img className="image" alt={potion.name} src={potion.image_url} />
+      </div>
+      {children}
+    </div>
+  );
+}
+
+
+
+export { ShopTile, InventoryTile, PotionTile };
